@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.AspNetCore.SpaServices.Webpack;
 
 namespace dotnet_core_with_vue_cli3
 {
@@ -32,6 +33,11 @@ namespace dotnet_core_with_vue_cli3
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+                app.UseWebpackDevMiddleware(new WebpackDevMiddlewareOptions
+                {
+                    HotModuleReplacement = true,
+                    ConfigFile = @"./node_modules/@vue/cli-service/webpack.config.js"
+                });
             }
             else
             {
@@ -51,6 +57,7 @@ namespace dotnet_core_with_vue_cli3
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
+                endpoints.MapFallbackToController("Index", "Home");
             });
         }
     }
