@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package>
+  <metadata>
+    <id>Anny.DotnetCore.Template</id>
+    <version>1.0.1</version>
+    <title>Anny DotnetCore Template Example</title>
+    <description>
+      Anny's DotnetCore Template for example.
+    </description>
+    <authors>Anny Chang</authors>
+    <summary>
+      ASP.NET Core Teamplate for Vue Cli.
+    </summary>
+    <packageTypes>
+      <packageType name="Template" />
+    </packageTypes>
+  </metadata>
+  <files>
+    <file
+      src="Content/**/*"
+      exclude="**/node_modules/**;**/package-lock.json;**/bin/**;**/obj/**;**/.vs/**;**/.vscode/**;**/wwwroot/**"
+      target="Content" />
+  </files>
+</package>

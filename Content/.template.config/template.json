@@ -1,0 +1,13 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "Anny Chang",
+  "classifications": [ "Web", "MVC", "SPA" ],
+  "identity": "Anny.DotnetCore.VueCli",
+  "name": "Anny Dotnet Core 3 With Vue Cli 3",
+  "shortName": "annydotnetvuecli",
+  "tags": {
+    "language": "C#",
+    "type": "item"
+  },
+  "sourceName": "dotnet_core_with_vue_cli3"
+}
